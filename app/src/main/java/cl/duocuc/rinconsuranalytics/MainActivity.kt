@@ -19,10 +19,10 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import cl.duocuc.rinconsuranalytics.data.datastore.UserPreferencesManager
 import cl.duocuc.rinconsuranalytics.data.local.AccessDatabase
-import cl.duocuc.rinconsuranalytics.data.repository.AccessRepository
-import cl.duocuc.rinconsuranalytics.ui.navigation.NavGraph
-import cl.duocuc.rinconsuranalytics.ui.register.RegisterViewModel
-import cl.duocuc.rinconsuranalytics.ui.theme.RinconSurAnalyticsTheme
+import cl.duocuc.rinconsuranalytics.repository.AccessRepository
+import cl.duocuc.rinconsuranalytics.navigations.NavGraph
+import cl.duocuc.rinconsuranalytics.theme.RinconSurAnalyticsTheme
+import cl.duocuc.rinconsuranalytics.viewmodels.RegisterViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 
         // Inicialización de Room (SQLite), DataStore y ViewModel (MVVM)
         val database = AccessDatabase.getDatabase(this)
-        val repository = AccessRepository(database.accessDao())
+        val repository = AccessRepository(database.accessDao(), database.userDao())
         val preferencesManager = UserPreferencesManager(this)
         val registerViewModel = RegisterViewModel(repository, preferencesManager)
 

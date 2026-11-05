@@ -1,4 +1,4 @@
-package cl.duocuc.rinconsuranalytics.ui.theme
+package cl.duocuc.rinconsuranalytics.theme
 
 import androidx.compose.ui.graphics.Color
 

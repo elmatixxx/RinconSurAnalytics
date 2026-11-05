@@ -8,7 +8,7 @@
  * e incorporando animaciones fluidas (fade in/out y deslizamiento) requeridas por la rúbrica.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.navigation
+package cl.duocuc.rinconsuranalytics.navigations
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.tween
@@ -16,18 +16,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import cl.duocuc.rinconsuranalytics.data.repository.AccessRepository
-import cl.duocuc.rinconsuranalytics.ui.analytics.AnalyticsScreen
-import cl.duocuc.rinconsuranalytics.ui.config.ApiConfigScreen
-import cl.duocuc.rinconsuranalytics.ui.dashboard.DashboardScreen
-import cl.duocuc.rinconsuranalytics.ui.detail.AccessDetailScreen
-import cl.duocuc.rinconsuranalytics.ui.history.HistoryScreen
-import cl.duocuc.rinconsuranalytics.ui.login.CreateAccountScreen
-import cl.duocuc.rinconsuranalytics.ui.login.LoginScreen
-import cl.duocuc.rinconsuranalytics.ui.profile.ProfileScreen
-import cl.duocuc.rinconsuranalytics.ui.recover.RecoverPasswordScreen
-import cl.duocuc.rinconsuranalytics.ui.register.RegisterScreen
-import cl.duocuc.rinconsuranalytics.ui.register.RegisterViewModel
+import cl.duocuc.rinconsuranalytics.repository.AccessRepository
+import cl.duocuc.rinconsuranalytics.view.*
+import cl.duocuc.rinconsuranalytics.viewmodels.RegisterViewModel
 
 @Composable
 fun NavGraph(
@@ -97,7 +88,7 @@ fun NavGraph(
         composable(Screen.History.route) {
             HistoryScreen(
                 navController = navController,
-                repository = repository
+                viewModel = registerViewModel
             )
         }
 

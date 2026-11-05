@@ -8,7 +8,7 @@
  * reactivamente (acceso seleccionado, dirección, tipo de cliente, edad, género, etc.).
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.register
+package cl.duocuc.rinconsuranalytics.viewmodels
 
 data class RegisterUiState(
     val accesoSeleccionado: Int = 2,

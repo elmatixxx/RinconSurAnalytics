@@ -7,7 +7,7 @@
  * disponibles en la aplicación para Jetpack Navigation Compose.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.navigation
+package cl.duocuc.rinconsuranalytics.navigations
 
 sealed class Screen(val route: String) {
     object Login : Screen("login")

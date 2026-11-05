@@ -8,7 +8,7 @@
  * de APIs externas para autenticación con Google (Gmail), Microsoft y OAuth2 institucional.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.login
+package cl.duocuc.rinconsuranalytics.view
 
 import android.widget.Toast
 import androidx.biometric.BiometricPrompt

@@ -8,7 +8,7 @@
  * del operador y el botón para cerrar sesión.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.profile
+package cl.duocuc.rinconsuranalytics.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -22,8 +22,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import cl.duocuc.rinconsuranalytics.ui.navigation.BottomNavigationBar
-import cl.duocuc.rinconsuranalytics.ui.register.RegisterViewModel
+import cl.duocuc.rinconsuranalytics.navigations.BottomNavigationBar
+import cl.duocuc.rinconsuranalytics.viewmodels.RegisterViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

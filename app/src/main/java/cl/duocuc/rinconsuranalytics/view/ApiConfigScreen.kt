@@ -8,7 +8,7 @@
  * (Room) y permite forzar la sincronización manual de datos.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.config
+package cl.duocuc.rinconsuranalytics.view
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
@@ -21,7 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import cl.duocuc.rinconsuranalytics.ui.navigation.BottomNavigationBar
+import cl.duocuc.rinconsuranalytics.navigations.BottomNavigationBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

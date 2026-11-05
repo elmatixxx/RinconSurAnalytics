@@ -5,17 +5,18 @@
  * DESCRIPCIÓN Y FUNCIÓN EN EL PROYECTO:
  * ViewModel de la arquitectura MVVM. Gestiona la lógica de negocio y el estado de la UI
  * mediante `StateFlow`. Conecta la UI con el repositorio (AccessRepository) y DataStore
- * (UserPreferencesManager) para insertar registros en SQLite y persistir la sesión de usuario
+ * (UserPreferencesManager) para insertar/actualizar registros en SQLite y persistir la sesión de usuario
  * de forma reactiva y segura ante cambios de configuración (rotación de pantalla).
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.register
+package cl.duocuc.rinconsuranalytics.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import cl.duocuc.rinconsuranalytics.data.datastore.UserPreferencesManager
 import cl.duocuc.rinconsuranalytics.data.local.AccessEntity
-import cl.duocuc.rinconsuranalytics.data.repository.AccessRepository
+import cl.duocuc.rinconsuranalytics.data.local.UserEntity
+import cl.duocuc.rinconsuranalytics.repository.AccessRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -29,6 +30,8 @@ class RegisterViewModel(
 
     private val _uiState = MutableStateFlow(RegisterUiState())
     val uiState: StateFlow<RegisterUiState> = _uiState.asStateFlow()
+
+    val allUsers = repository.allUsers
 
     init {
         preferencesManager?.let { prefs ->
@@ -78,10 +81,19 @@ class RegisterViewModel(
 
     fun setUserProfile(name: String, email: String) {
         _uiState.update { it.copy(currentUser = name.ifBlank { "Operador Rincón Sur" }, currentEmail = email.ifBlank { "operador@rinconsur.cl" }) }
+        viewModelScope.launch {
+            repository.insertUser(UserEntity(nombre = name, email = email))
+        }
         preferencesManager?.let { prefs ->
             viewModelScope.launch {
                 prefs.saveUserSession(name, email)
             }
+        }
+    }
+
+    fun updateAccess(access: AccessEntity) {
+        viewModelScope.launch {
+            repository.update(access)
         }
     }
 
@@ -112,6 +124,8 @@ class RegisterViewModel(
             }
         }
     }
+
+    val allAccesses = repository.allAccesses
 
     fun clearMensaje() {
         _uiState.update { it.copy(mensajeExito = null) }

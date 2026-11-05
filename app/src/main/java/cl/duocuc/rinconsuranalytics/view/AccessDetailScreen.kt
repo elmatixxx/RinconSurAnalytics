@@ -8,7 +8,7 @@
  * de tráfico, ubicación física y desgloses etarios.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.detail
+package cl.duocuc.rinconsuranalytics.view
 
 import android.Manifest
 import android.content.pm.PackageManager

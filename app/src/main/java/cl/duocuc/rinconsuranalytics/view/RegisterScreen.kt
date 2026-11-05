@@ -9,7 +9,7 @@
  * limpia automáticamente el formulario tras guardar para evitar duplicados.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.register
+package cl.duocuc.rinconsuranalytics.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -22,7 +22,8 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import cl.duocuc.rinconsuranalytics.ui.navigation.BottomNavigationBar
+import cl.duocuc.rinconsuranalytics.navigations.BottomNavigationBar
+import cl.duocuc.rinconsuranalytics.viewmodels.RegisterViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

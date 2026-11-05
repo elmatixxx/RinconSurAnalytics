@@ -7,7 +7,7 @@
  * y muestra información de soporte presencial con el coordinador CITT.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.recover
+package cl.duocuc.rinconsuranalytics.view
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.*

@@ -8,7 +8,7 @@
  * (Inicio, Registro, Historial, Analítica y Perfil) manteniendo el estado de navegación.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.navigation
+package cl.duocuc.rinconsuranalytics.navigations
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Analytics

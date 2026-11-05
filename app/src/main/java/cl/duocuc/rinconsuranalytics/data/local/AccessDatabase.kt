@@ -4,8 +4,8 @@
  * ===================================================================================
  * DESCRIPCIÓN Y FUNCIÓN EN EL PROYECTO:
  * Clase abstracta que configura la base de datos local SQLite utilizando Room.
- * Implementa el patrón Singleton (`getDatabase`) para garantizar que exista una única
- * instancia abierta de la base de datos en toda la aplicación, optimizando recursos y memoria.
+ * Incluye las entidades de accesos y de usuarios (tipos de usuario / registrados).
+ * Implementa el patrón Singleton (`getDatabase`).
  * ===================================================================================
  */
 package cl.duocuc.rinconsuranalytics.data.local
@@ -15,9 +15,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [AccessEntity::class], version = 1, exportSchema = false)
+@Database(entities = [AccessEntity::class, UserEntity::class], version = 2, exportSchema = false)
 abstract class AccessDatabase : RoomDatabase() {
     abstract fun accessDao(): AccessDao
+    abstract fun userDao(): UserDao
 
     companion object {
         @Volatile
@@ -29,7 +30,8 @@ abstract class AccessDatabase : RoomDatabase() {
                     context.applicationContext,
                     AccessDatabase::class.java,
                     "rincon_sur_db"
-                ).build()
+                ).fallbackToDestructiveMigration()
+                  .build()
                 INSTANCE = instance
                 instance
             }

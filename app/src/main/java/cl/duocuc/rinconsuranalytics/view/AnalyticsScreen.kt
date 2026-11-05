@@ -8,7 +8,7 @@
  * del comportamiento de los clientes en los accesos del centro comercial.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.analytics
+package cl.duocuc.rinconsuranalytics.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -20,7 +20,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import cl.duocuc.rinconsuranalytics.ui.navigation.BottomNavigationBar
+import cl.duocuc.rinconsuranalytics.navigations.BottomNavigationBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

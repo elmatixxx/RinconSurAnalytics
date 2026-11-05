@@ -8,7 +8,7 @@
  * y acceso directo al formulario de registro de muestras.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.dashboard
+package cl.duocuc.rinconsuranalytics.view
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -21,8 +21,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import cl.duocuc.rinconsuranalytics.ui.navigation.BottomNavigationBar
-import cl.duocuc.rinconsuranalytics.ui.navigation.Screen
+import cl.duocuc.rinconsuranalytics.navigations.BottomNavigationBar
+import cl.duocuc.rinconsuranalytics.navigations.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

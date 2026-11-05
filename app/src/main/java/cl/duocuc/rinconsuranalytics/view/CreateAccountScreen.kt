@@ -8,7 +8,7 @@
  * Actualiza de forma reactiva las preferencias de usuario mediante DataStore y ViewModel.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.ui.login
+package cl.duocuc.rinconsuranalytics.view
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
