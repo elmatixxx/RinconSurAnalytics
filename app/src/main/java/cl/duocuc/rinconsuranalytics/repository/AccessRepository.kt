@@ -11,9 +11,9 @@
 package cl.duocuc.rinconsuranalytics.repository
 
 import cl.duocuc.rinconsuranalytics.data.local.AccessDao
-import cl.duocuc.rinconsuranalytics.data.local.AccessEntity
 import cl.duocuc.rinconsuranalytics.data.local.UserDao
-import cl.duocuc.rinconsuranalytics.data.local.UserEntity
+import cl.duocuc.rinconsuranalytics.model.AccessEntity
+import cl.duocuc.rinconsuranalytics.model.UserEntity
 import kotlinx.coroutines.flow.Flow
 
 class AccessRepository(

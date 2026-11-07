@@ -1,14 +1,13 @@
 /**
  * ===================================================================================
- * CLASE DATA: AccessEntity
+ * CLASE MODEL: AccessEntity
  * ===================================================================================
  * DESCRIPCIÓN Y FUNCIÓN EN EL PROYECTO:
- * Representa la tabla SQLite `conteo_accesos` en la base de datos local Room.
- * Almacena los atributos de cada muestra de conteo registrada por el operador (acceso,
- * dirección de flujo, tipo de cliente, rango etario, género, acompañantes y observaciones).
+ * Representa el modelo de datos (Entity) para la tabla SQLite `conteo_accesos` en Room.
+ * Almacena los atributos de cada muestra de conteo registrada por el operador.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.data.local
+package cl.duocuc.rinconsuranalytics.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

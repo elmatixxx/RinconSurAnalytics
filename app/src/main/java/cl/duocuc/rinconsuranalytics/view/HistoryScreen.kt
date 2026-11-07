@@ -23,9 +23,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import cl.duocuc.rinconsuranalytics.data.local.AccessEntity
+import cl.duocuc.rinconsuranalytics.model.AccessEntity
 import cl.duocuc.rinconsuranalytics.navigations.BottomNavigationBar
-import cl.duocuc.rinconsuranalytics.viewmodels.RegisterViewModel
+import cl.duocuc.rinconsuranalytics.viewmodel.RegisterViewModel
 import java.text.SimpleDateFormat
 import java.util.*
 

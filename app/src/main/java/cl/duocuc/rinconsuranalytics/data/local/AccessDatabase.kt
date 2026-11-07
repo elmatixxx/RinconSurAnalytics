@@ -14,6 +14,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import cl.duocuc.rinconsuranalytics.model.AccessEntity
+import cl.duocuc.rinconsuranalytics.model.UserEntity
 
 @Database(entities = [AccessEntity::class, UserEntity::class], version = 2, exportSchema = false)
 abstract class AccessDatabase : RoomDatabase() {

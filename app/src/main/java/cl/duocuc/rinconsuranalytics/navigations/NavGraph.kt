@@ -18,7 +18,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import cl.duocuc.rinconsuranalytics.repository.AccessRepository
 import cl.duocuc.rinconsuranalytics.view.*
-import cl.duocuc.rinconsuranalytics.viewmodels.RegisterViewModel
+import cl.duocuc.rinconsuranalytics.viewmodel.RegisterViewModel
 
 @Composable
 fun NavGraph(

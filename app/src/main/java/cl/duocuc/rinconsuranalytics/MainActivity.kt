@@ -22,7 +22,7 @@ import cl.duocuc.rinconsuranalytics.data.local.AccessDatabase
 import cl.duocuc.rinconsuranalytics.repository.AccessRepository
 import cl.duocuc.rinconsuranalytics.navigations.NavGraph
 import cl.duocuc.rinconsuranalytics.theme.RinconSurAnalyticsTheme
-import cl.duocuc.rinconsuranalytics.viewmodels.RegisterViewModel
+import cl.duocuc.rinconsuranalytics.viewmodel.RegisterViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

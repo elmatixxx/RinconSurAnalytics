@@ -1,14 +1,12 @@
 /**
  * ===================================================================================
- * CLASE DATA: RegisterUiState
+ * CLASE MODEL: RegisterUiState
  * ===================================================================================
  * DESCRIPCIÓN Y FUNCIÓN EN EL PROYECTO:
- * Define el estado inmutable de la UI para el registro de muestras y perfil de usuario.
- * Contiene todas las variables observables que la pantalla (RegisterScreen) renderiza
- * reactivamente (acceso seleccionado, dirección, tipo de cliente, edad, género, etc.).
+ * Modelo de estado inmutable de la UI para el registro de muestras y perfil de usuario.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.viewmodels
+package cl.duocuc.rinconsuranalytics.model
 
 data class RegisterUiState(
     val accesoSeleccionado: Int = 2,

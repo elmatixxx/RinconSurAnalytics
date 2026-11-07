@@ -15,6 +15,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
+import cl.duocuc.rinconsuranalytics.model.AccessEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao

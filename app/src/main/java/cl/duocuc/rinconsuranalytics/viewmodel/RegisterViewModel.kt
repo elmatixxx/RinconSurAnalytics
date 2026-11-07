@@ -1,21 +1,20 @@
 /**
  * ===================================================================================
- * CLASE: RegisterViewModel
+ * CLASE VIEWMODEL: RegisterViewModel
  * ===================================================================================
  * DESCRIPCIÓN Y FUNCIÓN EN EL PROYECTO:
  * ViewModel de la arquitectura MVVM. Gestiona la lógica de negocio y el estado de la UI
- * mediante `StateFlow`. Conecta la UI con el repositorio (AccessRepository) y DataStore
- * (UserPreferencesManager) para insertar/actualizar registros en SQLite y persistir la sesión de usuario
- * de forma reactiva y segura ante cambios de configuración (rotación de pantalla).
+ * mediante `StateFlow`, conectando las vistas (`view`) con los modelos (`model`) y el repositorio.
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.viewmodels
+package cl.duocuc.rinconsuranalytics.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import cl.duocuc.rinconsuranalytics.data.datastore.UserPreferencesManager
-import cl.duocuc.rinconsuranalytics.data.local.AccessEntity
-import cl.duocuc.rinconsuranalytics.data.local.UserEntity
+import cl.duocuc.rinconsuranalytics.model.AccessEntity
+import cl.duocuc.rinconsuranalytics.model.RegisterUiState
+import cl.duocuc.rinconsuranalytics.model.UserEntity
 import cl.duocuc.rinconsuranalytics.repository.AccessRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

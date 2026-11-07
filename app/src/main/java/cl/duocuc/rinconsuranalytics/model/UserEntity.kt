@@ -1,14 +1,13 @@
 /**
  * ===================================================================================
- * CLASE DATA: UserEntity
+ * CLASE MODEL: UserEntity
  * ===================================================================================
  * DESCRIPCIÓN Y FUNCIÓN EN EL PROYECTO:
- * Entidad de Room (SQLite) para almacenar los usuarios y operadores registrados en la app
- * (tanto creados por formulario como autenticados mediante Google/Gmail/Microsoft).
- * Cumple con el requisito de persistencia de usuarios en base de datos local SQLite.
+ * Modelo de datos (Entity) de Room (SQLite) para almacenar los usuarios y operadores
+ * registrados en la app (tanto creados por formulario como autenticados mediante Google/Gmail).
  * ===================================================================================
  */
-package cl.duocuc.rinconsuranalytics.data.local
+package cl.duocuc.rinconsuranalytics.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
